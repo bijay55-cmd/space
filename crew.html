@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+
+    <nav>
+        <img src="./assets/shared/logo.svg">
+
+        <div class="hamburger">
+            <img src="./assets/shared/icon-hamburger.svg">
+        </div>
+
+
+        <div class="navbar">
+
+            <span><number>00</number> <a href="space.html"><p>HOME</p></a></span>
+            <span><number>01</number> <a href="destination.html"><p>DESTINATION</p></a></span>
+            <span class="headerlink"><number>02</number> <a href="crew.html"><p>CREW</p></a></span>
+            <span><number>03</number> <a href="techno.html"><p>TECHNOLOGY</p></a></span>
+           
+        </div>
+
+        <div class="overlay">
+            <div class="close">
+                <img src="./assets/shared/icon-close.svg">
+
+                <span><number>00</number> <a href="space.html"><p>HOME</p></a></span>
+            <span><number>01</number> <a href="destination.html"><p>DESTINATION</p></a></span>
+            <span class="headerlink"><number>02</number> <a href="crew.html"><p>CREW</p></a></span>
+            <span><number>03</number> <a href="techno.html"><p>TECHNOLOGY</p></a></span>
+           
+            </div>
+        </div>
+    </nav>
+
+    <div class="crew tabcontent" id="crew">
+
+        <h1 class="crewintro"><span class="number">02</span> MEET YOUR CREW</h1>
+
+        <div class="flex flex2">
+
+            <div class="tabimg tabswitch" id="firstcrewimg">
+
+                <img class="img2" src="./assets/crew/image-victor-glover.png">
+            </div>
+
+
+            <div class="tabimg tabswitch" id="secondcrewimg">
+
+                <img class="img2" src="./assets/crew/image-mark-shuttleworth.png">
+
+            </div>
+
+
+
+            <div class="tabimg tabswitch" id="thirdcrewimg">
+
+                <img class="img2" src="./assets/crew/image-douglas-hurley.png">
+
+            </div>
+
+
+
+            <div class="tabimg tabswitch" id="fourthcrewimg">
+
+                <img class="img2" src="./assets/crew/image-anousheh-ansari.png">
+
+            </div>
+
+
+            <div class="crewsection">
+
+                <div>
+                    <button class="tablinks" id="defaultOpen3" onclick="destiny(event, 'firstcrew'); des(event, 'firstcrewimg')"></button>
+                    <button class="btn tablinks" onclick="destiny(event, 'secondcrew'); des(event, 'secondcrewimg')"></button>
+                    <button class="btn tablinks" onclick="destiny(event, 'thirdcrew'); des(event, 'thirdcrewimg')"></button>
+                    <button class="btn tablinks" onclick="destiny(event, 'fourthcrew'); des(event, 'fourthcrewimg')"></button>
+                </div>
+
+                <br>
+
+                <div class="description tabcontent2" id="firstcrew">
+
+                    <h1>PILOT</h1>
+                    <br>
+                    <h1>VICTOR GLOVER</h1>
+                    <br>
+
+                    <p>Victor Glover Pilot on the first operational flight of the SpaceX Crew Dragon to the
+                        International
+                        Space Station. Glover is a commander in the U.S. Navy where he pilots an F/A-18.He was a crew
+                        member
+                        of Expedition 64, and served as a station systems flight engineer. </p>
+                    <br>
+
+
+                </div>
+
+                <div class="description tabcontent2" id="secondcrew">
+
+                    <h1>SPECIALIST</h1>
+                    <br>
+                    <h1>MARK RICHARD SHUTTLEWORTH</h1>
+                    <br>
+
+                    <p>Mark Richard Shuttleworth is the founder and CEO of Canonical, the company behind the Linux-based
+                        Ubuntu operating system. Shuttleworth became the first South African to travel to space as a
+                        space
+                        tourist. </p>
+                    <br>
+
+
+                </div>
+
+                <div class="description tabcontent2" id="thirdcrew">
+
+                    <h1>COMMANDER</h1>
+                    <br>
+                    <h1>DOUGLAS GERALD HURLEY</h1>
+                    <br>
+
+                    <p>Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA
+                        astronaut.
+                        He launched into space for the third time as commander of Crew Dragon Demo-2. </p>
+                    <br>
+
+
+                </div>
+
+                <div class="description tabcontent2" id="fourthcrew">
+
+                    <h1>Flight Engineer</h1>
+                    <br>
+                    <h1>ANOUSHEH ANSARI</h1>
+                    <br>
+
+                    <p>Anousheh Ansari is an Iranian American engineer and co-founder of Prodea Systems. Ansari was the
+                        fourth self-funded space tourist, the first self-funded woman to fly to the ISS, and the first
+                        Iranian in space. </p>
+                    <br>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+function destiny(evt, spacename){
+
+var i, tabcontent,tablinks;
+
+tabcontent = document.getElementsByClassName('tabcontent2');
+
+for(i =0; i< tabcontent.length; i++){
+    tabcontent[i].style.display="none";
+}
+
+tablinks = document.getElementsByClassName("tablinks");
+for (i = 0; i < tablinks.length; i++) {
+  tablinks[i].className = tablinks[i].className.replace(" active", "");
+}
+
+document.getElementById(spacename).style.display="block";
+evt.currentTarget.className += " active";
+}
+
+function des(evt, spacename){
+
+var i, tabcontent;
+
+tabcontent = document.getElementsByClassName('tabswitch');
+
+for(i =0; i< tabcontent.length; i++){
+    tabcontent[i].style.display="none";
+}
+
+document.getElementById(spacename).style.display="flex";
+
+}
+
+document.getElementById("defaultOpen3").click();
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+
+    <nav>
+        <img src="./assets/shared/logo.svg">
+
+        <div class="hamburger">
+            <img src="./assets/shared/icon-hamburger.svg">
+        </div>
+
+
+        <div class="navbar">
+
+            <span><number>00</number> <a href="space.html"><p>HOME</p></a></span>
+            <span class="headerlink"><number>01</number> <a href="destination.html"><p>DESTINATION</p></a></span>
+            <span><number>02</number> <a href="crew.html"><p>CREW</p></a></span>
+            <span><number>03</number> <a href="techno.html"><p>TECHNOLOGY</p></a></span>
+           
+           
+        </div>
+
+        <div class="overlay">
+            <div class="close">
+                <img src="./assets/shared/icon-close.svg">
+
+                <span><number>00</number> <a href="space.html"><p>HOME</p></a></span>
+                <span class="headerlink"><number>01</number> <a href="destination.html"><p>DESTINATION</p></a></span>
+                <span><number>02</number> <a href="crew.html"><p>CREW</p></a></span>
+                <span><number>03</number> <a href="techno.html"><p>TECHNOLOGY</p></a></span>
+               
+               
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="tabcontent destination" id="destination">
+
+        <h1><span class="number">01</span> PICK YOUR DESTINATION</h1>
+
+        <div class="flex">
+
+            <div class="tabimg tabswitch" id="Moonimg">
+
+                <img class="img" src="./assets/destination/image-moon.png">
+
+            </div>
+
+            <div class="tabimg tabswitch" id="Marsimg">
+
+                <img class="img" src="./assets/destination/image-mars.png">
+
+            </div>
+
+            <div class="tabimg tabswitch" id="Europaimg">
+
+                <img class="img" src="./assets/destination/image-europa.png">
+
+            </div>
+
+            <div class="tabimg tabswitch" id="Titanimg">
+
+                <img class="img" src="./assets/destination/image-titan.png">
+
+            </div>
+
+
+            <div class="descriptionsection">
+
+                <div>
+                    <button class="tablinks" id="defaultOpen2" onclick="destiny(event, 'Moon'); des(event, 'Moonimg')">MOON</button>
+                    <button class="btn tablinks" onclick="destiny(event, 'Mars'); des(event, 'Marsimg')">MARS</button>
+                    <button class="btn tablinks" onclick="destiny(event, 'Europa'); des(event, 'Europaimg')">EUROPA</button>
+                    <button class="btn tablinks" onclick="destiny(event, 'Titan'); des(event, 'Titanimg')">TITAN</button>
+                </div>
+
+                <br>
+
+                <div class="description tabcontent2" id="Moon">
+
+                    <h1>MOON</h1>
+                    <br>
+
+                    <p>See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain
+                        perspective
+                        and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and
+                        Apollo 11
+                        landing sites.</p>
+                    <br>
+
+                    <hr>
+
+                    <br>
+
+                    <div class="planetinfo">
+
+                        <div>
+                            <p>AVG.DISTANCE</p>
+                            <h2>225 MIL.KM</h2>
+                        </div>
+
+                        <br>
+
+                        <div class="secondinfo">
+                            <p>EST.TRAVEL TIME</p>
+                            <h2>9 MONTHS</h2>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="description tabcontent2" id="Mars">
+
+                    <h1>MARS</h1>
+                    <br>
+
+                    <p>Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, the tallest
+                        planetary mountain in our solar system. It’s two and a half times the size of Everest!</p>
+                    <br>
+
+                    <hr>
+
+                    <br>
+
+                    <div class="planetinfo">
+
+                        <div>
+                            <p>AVG.DISTANCE</p>
+                            <h2>225 MIL.KM</h2>
+                        </div>
+
+                        <br>
+
+                        <div  class="secondinfo">
+                            <p>EST.TRAVEL TIME</p>
+                            <h2>9 MONTHS</h2>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="description tabcontent2" id="Europa">
+
+                    <h1>EUROPA</h1>
+                    <br>
+
+                    <p>The smallest of the four Galilean moons orbiting Jupiter, Europa is a winter lover’s
+                        dream. With an icy surface, it’s perfect for a bit of ice skating, curling, hockey, or simple
+                        relaxation in your snug wintery cabin. </p>
+                    <br>
+
+                    <hr>
+
+                    <br>
+
+                    <div class="planetinfo">
+
+                        <div>
+                            <p>AVG.DISTANCE</p>
+                            <h2>628 MIL.KM</h2>
+                        </div>
+
+                        <br>
+
+                        <div  class="secondinfo">
+                            <p>EST.TRAVEL TIME</p>
+                            <h2>3 years</h2>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="description tabcontent2" id="Titan">
+
+                    <h1>TITAN</h1>
+                    <br>
+
+                    <p> The only moon known to have a dense atmosphere other than Earth, Titan is a home away from home
+                        (just a few hundred degrees colder!). As a bonus, you get striking views of the Rings of Saturn.
+                    </p>
+                    <br>
+
+                    <hr>
+
+                    <br>
+
+                    <div class="planetinfo">
+
+                        <div>
+                            <p>AVG.DISTANCE</p>
+                            <h2>1.6 BIL.KM</h2>
+                        </div>
+
+                        <br>
+
+                        <div  class="secondinfo">
+                            <p>EST.TRAVEL TIME</p>
+                            <h2>7 years</h2>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+function destiny(evt, spacename){
+
+var i, tabcontent,tablinks;
+
+tabcontent = document.getElementsByClassName('tabcontent2');
+
+for(i =0; i< tabcontent.length; i++){
+    tabcontent[i].style.display="none";
+}
+
+tablinks = document.getElementsByClassName("tablinks");
+for (i = 0; i < tablinks.length; i++) {
+  tablinks[i].className = tablinks[i].className.replace(" active", "");
+}
+
+document.getElementById(spacename).style.display="block";
+evt.currentTarget.className += " active";
+}
+
+function des(evt, spacename){
+
+var i, tabcontent;
+
+tabcontent = document.getElementsByClassName('tabswitch');
+
+for(i =0; i< tabcontent.length; i++){
+    tabcontent[i].style.display="none";
+}
+
+document.getElementById(spacename).style.display="flex";
+
+}
+
+document.getElementById("defaultOpen2").click();
+
+    </script>
+    
+</body>
+</html>

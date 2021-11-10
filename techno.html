@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+
+    <nav>
+        <img src="./assets/shared/logo.svg">
+
+        <div class="hamburger">
+            <img src="./assets/shared/icon-hamburger.svg">
+        </div>
+
+
+        <div class="navbar">
+
+            <span><number>00</number> <a href="space.html"><p>HOME</p></a></span>
+            <span><number>01</number> <a href="destination.html"><p>DESTINATION</p></a></span>
+            <span><number>02</number> <a href="crew.html"><p>CREW</p></a></span>
+            <span class="headerlink"><number>03</number> <a href="techno.html"><p>TECHNOLOGY</p></a></span>
+           
+           
+        </div>
+
+        <div class="overlay">
+            <div class="close">
+                <img src="./assets/shared/icon-close.svg">
+                <span><number>00</number> <a href="space.html"><p>HOME</p></a></span>
+                <span><number>01</number> <a href="destination.html"><p>DESTINATION</p></a></span>
+                <span><number>02</number> <a href="crew.html"><p>CREW</p></a></span>
+                <span class="headerlink"><number>03</number> <a href="techno.html"><p>TECHNOLOGY</p></a></span>
+               
+               
+            </div>
+        </div>
+    </nav>
+
+    <div class="technology tabcontent" id="technology">
+
+        <h1 class="technointro"><span class="number">03</span> SPACE LAUNCH 101</h1>
+
+        <div class="flex flex3">
+
+            <div class="tabimg tabswitch" id="firstlaunchimg">
+
+                <img class="mobileimg" src="./assets/technology/image-launch-vehicle-landscape.jpg">
+                <img class="desktopimg" src="./assets/technology/image-launch-vehicle-portrait.jpg">
+
+            </div>
+
+
+            <div class="tabimg tabswitch" id="secondlaunchimg">
+
+                <img class="mobileimg" src="./assets/technology/image-space-capsule-landscape.jpg">
+                <img class="desktopimg" src="./assets/technology/image-space-capsule-portrait.jpg">
+
+            </div>
+
+
+
+            <div class="tabimg tabswitch" id="thirdlaunchimg">
+
+                <img class="mobileimg" src="./assets/technology/image-spaceport-landscape.jpg">
+                <img class="desktopimg" src="./assets/technology/image-spaceport-portrait.jpg">
+
+            </div>
+
+
+
+
+            <div class="technosection">
+
+                <div class="technologybtn">
+                    <button class="tablinks" id="defaultOpen3" onclick="destiny(event, 'firstlaunch'); des(event, 'firstlaunchimg')">1</button>
+                    <button class="btn tablinks" onclick="destiny(event, 'secondlaunch'); des(event, 'secondlaunchimg')">2</button>
+                    <button class="btn tablinks" onclick="destiny(event, 'thirdlaunch'); des(event, 'thirdlaunchimg')">3</button>
+                </div>
+
+                <br>
+
+                <div class="description tabcontent2" id="firstlaunch">
+
+                    <h1>THE TERMINOLOGY... </h1>
+                    <br>
+                    <h1>LAUNCH VEHICLE</h1>
+                    <br>
+
+                    <p>A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from
+                        Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most
+                        powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch
+                        pad! </p>
+                    <br>
+
+
+                </div>
+
+                <div class="description tabcontent2" id="secondlaunch">
+
+                    <h1>THE TERMINOLOGY...</h1>
+                    <br>
+                    <h1>SPACE CAPSULE</h1>
+                    <br>
+
+                    <p>A space capsule is an often-crewed spacecraft that uses a blunt-body reentry capsule to reenter
+                        the Earth's atmosphere without wings. Our capsule is where you'll spend your time during the
+                        flight. It includes a space gym, cinema, and plenty of other activities to keep you entertained.
+                    </p>
+                    <br>
+
+
+                </div>
+
+                <div class="description tabcontent2" id="thirdlaunch">
+
+                    <h1>THE TERMINOLOGY...</h1>
+                    <br>
+                    <h1>SPACEPORT</h1>
+                    <br>
+
+                    <p>A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, by analogy to the
+                        seaport for ships or airport for aircraft. Based in the famous Cape Canaveral, our spaceport is
+                        ideally situated to take advantage of the Earth’s rotation for launch. </p>
+                    <br>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    
+
+    <script>
+
+function destiny(evt, spacename){
+
+var i, tabcontent,tablinks;
+
+tabcontent = document.getElementsByClassName('tabcontent2');
+
+for(i =0; i< tabcontent.length; i++){
+    tabcontent[i].style.display="none";
+}
+
+tablinks = document.getElementsByClassName("tablinks");
+for (i = 0; i < tablinks.length; i++) {
+  tablinks[i].className = tablinks[i].className.replace(" active", "");
+}
+
+document.getElementById(spacename).style.display="block";
+evt.currentTarget.className += " active";
+}
+
+function des(evt, spacename){
+
+var i, tabcontent;
+
+tabcontent = document.getElementsByClassName('tabswitch');
+
+for(i =0; i< tabcontent.length; i++){
+    tabcontent[i].style.display="none";
+}
+
+document.getElementById(spacename).style.display="flex";
+
+}
+
+document.getElementById("defaultOpen3").click();
+
+    </script>
+</body>
+</html>
