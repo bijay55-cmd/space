@@ -248,7 +248,7 @@ button:hover, nav p:hover{
     font-size: 20px;
 }
 .tabcontent{
-padding:0 20px
+padding:0 10px
 }
 
 @media screen and (max-height:700px){
